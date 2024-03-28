@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+
+    <div class="overlay-darkmode-selector" data-overlay-darkmode>
+
+
+        <i class='bx bx-x close-overlay-icon' data-close-overlay></i>
+
+
+
+
+        <div class="darkmode-selector-container">
+
+
+            <div class="darkmode-img-container">
+                <img src="img/toonbg2.png" alt="">
+            </div>
+
+
+            <div class="go-dark-switch">
+                <label class="switch godarkswitch">
+                    <input type="checkbox" id="dark_mode_toggle">
+                    <span class="slider round"></span>
+                    <i class='bx bx-moon dark'></i>
+                    <i class='bx bxs-sun light'></i>
+                </label>
+            </div>
+
+        </div>
+    </div>
+    <main>
+        <header>
+
+            <div class="logo">
+                <a href="#" class="nav-link">
+                    <i class="fa-solid fa-forward primary secondary" id="navToggleBtn"></i>
+                    <span class="logotxt"><span class="j">J</span>ustin</span>
+                </a>
+            </div>
+
+
+            <nav class="navbar" id="to-be-toggled">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">
+                            <i class="fa-solid fa-house primary secondary"></i>
+                            <span class="link-text">Home</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link active">
+                            <i class="fa-solid fa-address-card primary secondary"></i>
+                            <span class="link-text">About</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="fa-solid fa-diagram-project primary secondary"></i>
+                            <span class="link-text">Projects</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="fa-solid fa-file primary secondary"></i>
+                            <span class="link-text">Resume</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="fa-solid fa-phone primary secondary"></i>
+                            <span class="link-text">Contact</span>
+                        </a>
+                    </li>
+                    <li class=" dark-icon-container">
+                        <a href="#" class="nav-link" id="activate-overlay-btn">
+                            <i class="fa-solid fa-moon primary secondary"></i>
+                        </a>
+                    </li>
+
+                </ul>
+            </nav>
+
+
+        </header>
+    </main>
+
+    <section id="about-section">
+
+        <div class="about-img-container">
+            <img src="img/aboutbg.png" alt="">
+        </div>
+
+        <div class="about-content" id="aboutContent">
+            <span class="me">Let Me Introduce Myself</span>
+            <h2><span>About Me</span></h2>
+            <h3>A Story Of Good</h3>
+
+            <p>I'm Onyiriuka Justin, a fervent advocate for cybersecurity and an artisan of web development. Over the
+                course of a comprehensive two-year program, I've cultivated a deep-seated proficiency in
+                JavaScript,HTML, and CSS the cornerstones that empower today's web.
+                <br>
+                <br>
+            <div class="readmore-unclicked">
+                My portfolio is a showcase of various projects that reflect my commitment to not just functionality, but
+                also to the aesthetic and interactive aspects of web design. As I continue to expand my knowledge
+                through a focused study of JavaScript, I remain dedicated to staying abreast of the latest advancements
+                in the field.
+                <br>
+                <br>
+                The magic of transforming a nascent idea into a fully-functional website captivates me. It's a journey I
+                cherish, from the initial concept to the intricacies of code that bring a vision to fruition. This
+                process is a testament to the power and beauty of web development.
+                <br>
+                <br>
+                Looking ahead, my aspiration is to contribute significantly to the evolution of coding practices. I aim
+                to be at the forefront, influencing how coding is perceived and applied in creating innovative solutions
+                for the digital age. Discover the projects that have fueled my passion and join me in this ongoing quest
+                for excellence and innovation.</p>
+            </div>
+
+
+            <button class="read-more-btn" id="readMoreBtn">
+                <span class="read-more-btn-txt" id="btnText">Read More</span>
+            </button>
+        </div>
+
+    </section>
+
+
+
+
+
+
+
+
+    <script src="https://kit.fontawesome.com/c76b9e77b5.js" crossorigin="anonymous"></script>
+    <script defer src="script.js"></script>
+</body>
+
+</html>
