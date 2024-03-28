@@ -431,13 +431,6 @@ i {
     border: 1px solid var(--hover-color);
 }
 
-/* .darkmode .hero-texts-section .social-icons a i:hover {
-    background: var(--secon-bg-color);
-    color: var(--hover-color);
-    border: 1px solid var(--hover-color);
-} */
-
-
 @keyframes dropIn {
     from {
         transform: translateY(-30px);
@@ -766,20 +759,28 @@ input:checked+.slider:before {
 /* about section  */
 
 #about-section {
-    padding: 10px 50px;
+    padding: 20px 50px;
     display: flex;
     grid-gap: 3rem;
     align-items: center;
+    margin-top: 50px;
+    overflow-x: hidden;
 }
 
 .about-img-container {
     max-width: 350px;
     height: auto;
+    background: #e9e8e8;
+    border-radius: 50px;
+    z-index: -1;
 }
 
 .about-img-container img {
     width: 100%;
     height: 100%;
+    z-index: 10;
+    position: relative;
+    margin-bottom: -6px;
 }
 
 .about-content {
@@ -787,8 +788,85 @@ input:checked+.slider:before {
     display: inline-flex;
     flex-direction: column;
     justify-content: center;
+
+    text-align: left;
 }
 
 .readmore-unclicked {
     display: none;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.read-more-btn {
+    border: 2px solid var(--hover-color);
+    border-radius: 6px;
+    width: 160px;
+    padding: 12px;
+    background: transparent;
+    font-size: 16px;
+    font-weight: 600;
+    overflow: hidden;
+    position: relative;
+}
+
+.read-more-btn::before {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background: var(--hover-color);
+    transition: .5s ease-in-out;
+}
+
+.read-more-btn:hover::before {
+    width: 100%;
+}
+
+.about-img-container .liquid-shape {
+    width: 50%;
+    position: absolute;
+    left: -30%;
+    top: 10%;
+    z-index: -1;
+}
+
+.parent-fill {
+    position: relative;
+    margin-bottom: 5px;
+}
+
+.animation-fill {
+    width: 10%;
+    height: 12vh;
+    background: var(--hover-color);
+    border-radius: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: .5s ease;
+    animation: fill 3s forwards linear;
+    animation-delay: .5s;
+}
+
+@keyframes fill {
+    100% {
+        width: 100%;
+        border-radius: 50px;
+    }
+}
+
+.about-content h2 {
+    width: 100%;
+    height: 12vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
