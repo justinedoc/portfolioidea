@@ -346,7 +346,7 @@ i {
     justify-content: space-between;
     align-items: center;
     padding: 8px 10px;
-    margin-top: 20px;
+    margin-top: 50px;
     margin-left: 85px;
     transition: all 2s ease-in-out;
     visibility: hidden;
@@ -419,6 +419,10 @@ i {
     animation-delay: calc(var(--order) * 200ms);
     border: 1px solid transparent;
     transition: .3s ease-in-out;
+}
+
+.hero-texts-section .social-icons a i:hover {
+    color: #8c8b8b;
 }
 
 .darkmode .hero-texts-section .social-icons a i:hover {
