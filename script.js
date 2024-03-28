@@ -129,6 +129,9 @@ window.onload = function () {
     }
 };
 
+
+// Read more Button 
+
 const readMoreBtn = document.getElementById("readMoreBtn");
 const btnText = document.getElementById("btnTxt");
 const aboutSection = document.getElementById("about-section");
@@ -143,6 +146,9 @@ readMoreBtn.addEventListener("click", () => {
     }
 });
 
+
+// Fill animation 
+
 const animationFill = document.querySelector(".animation-fill");
 const aboutContentH2 = document.querySelector(".h2");
 let counter = 0;
@@ -152,11 +158,13 @@ const animateColor = setInterval(() => {
     if (counter === 50) {
         aboutContentH2.style.setProperty('color', '#ffff');
         animationFill.style.setProperty('background', 'var(--secon-bg-color)');
+        readMoreBtn.style.setProperty('border-color', 'var(--secon-bg-color)')
     }
 
-    if (counter === 100) {
+    if (counter === 70) {
         aboutContentH2.style.setProperty('color', '#000');
         animationFill.style.setProperty('background', 'var(--hover-color)');
+        readMoreBtn.style.setProperty('border-color', 'var(--hover-color)')
         clearInterval(animateColor);
     }
 }, 60)

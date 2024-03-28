@@ -207,7 +207,7 @@ i {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 950px;
+    width: 1100px;
     margin-top: 40px;
     padding: 0px 20px 0px 50px;
     border-top-left-radius: 40px;
@@ -864,6 +864,7 @@ input:checked+.slider:before {
     overflow: hidden;
     position: relative;
     cursor: pointer;
+    transition: 1s ease-in-out;
 }
 
 .read-more-btn::before {
