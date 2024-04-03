@@ -36,6 +36,9 @@ body::-webkit-scrollbar {
     display: none;
 }
 
+section {
+    padding: 80px 10%;
+}
 
 
 /* logo sytles */
@@ -198,16 +201,22 @@ i {
 /* hero section (bg and styles) */
 
 #hero {
-    display: flex;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     align-items: center;
-    justify-content: space-between;
-    padding: 30px 100px;
+    grid-gap: 4rem;
 }
 
 .intro {
     margin-top: 5px;
     width: 500px;
     color: #5e5e5e;
+}
+
+.darkmode .intro {
+    color: #d3d3d3;
 }
 
 #hero .img-container {
@@ -238,7 +247,7 @@ i {
 }
 
 #hero .btn-container {
-    margin-top: 30px;
+    margin-top: 40px;
     height: 8vh;
     display: flex;
     justify-content: flex-start;
@@ -249,16 +258,23 @@ i {
     width: 160px;
     background: transparent;
     border: 2px solid var(--hover-color);
-    border-radius: 10px;
+    border-radius: 6px;
     font-size: 17px;
     font-weight: 600;
     overflow: hidden;
     position: relative;
+    cursor: pointer;
+}
+
+.darkmode .Explore-me-btn {
+    color: var(--darkmode-text-color);
+    z-index: 1;
+    transition: .3s ease-in;
 }
 
 .Explore-me-btn:nth-child(2)::before {
     width: 100%;
-    transition: transform .6s ease-in;
+    transition: transform .5s ease-in;
 }
 
 .Explore-me-btn:nth-child(2):hover::before {
@@ -280,6 +296,16 @@ i {
 .Explore-me-btn:hover::before {
     width: 100%;
 }
+
+.darkmode .Explore-me-btn:hover,
+.darkmode .Explore-me-btn:nth-child(2) {
+    color: var(--secon-bg-color);
+}
+
+.darkmode .Explore-me-btn:nth-child(2):hover {
+    color: var(--darkmode-text-color);
+}
+
 
 .darkmode .liquid-shape {
     z-index: -1;
@@ -318,15 +344,6 @@ i {
 
 .change-text span {
     color: #12f7ff;
-}
-
-
-.darkmode .btn-main::before {
-    width: 0;
-}
-
-.darkmode .btn-main:hover::before {
-    width: 100%;
 }
 
 
