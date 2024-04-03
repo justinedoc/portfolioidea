@@ -199,36 +199,32 @@ i {
 
 #hero {
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: space-between;
+    padding: 30px 100px;
 }
 
-#hero .hero-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 1100px;
-    margin-top: 40px;
-    padding: 0px 20px 0px 50px;
-    border-top-left-radius: 40px;
-    border-bottom-left-radius: 60px;
-    border-top-right-radius: 60px;
-    border-bottom-right-radius: 40px;
-    animation: heroFloat 5s ease-in-out infinite;
+.intro {
+    margin-top: 5px;
+    width: 500px;
+    color: #5e5e5e;
 }
 
 #hero .img-container {
-    width: 350px;
-    height: 450px;
+    max-width: 350px;
+    height: 400px;
     position: relative;
+    background: #e9e8e8;
+    z-index: -1;
+    border-radius: 50px;
 }
 
 .liquid-shape {
     position: absolute;
-    width: 140%;
+    width: 100%;
     height: 100%;
-    top: 0;
-    left: -35%;
+    top: -5%;
+    left: 0%;
     z-index: -1;
 }
 
@@ -239,6 +235,50 @@ i {
 #hero .img-container img {
     width: 100%;
     height: 100%;
+}
+
+#hero .btn-container {
+    margin-top: 30px;
+    height: 8vh;
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.Explore-me-btn {
+    width: 160px;
+    background: transparent;
+    border: 2px solid var(--hover-color);
+    border-radius: 10px;
+    font-size: 17px;
+    font-weight: 600;
+    overflow: hidden;
+    position: relative;
+}
+
+.Explore-me-btn:nth-child(2)::before {
+    width: 100%;
+    transition: transform .6s ease-in;
+}
+
+.Explore-me-btn:nth-child(2):hover::before {
+    transform: translateX(360px);
+}
+
+.Explore-me-btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    z-index: -1;
+    background: var(--hover-color);
+    transition: .3s ease-in;
+}
+
+.Explore-me-btn:hover::before {
+    width: 100%;
 }
 
 .darkmode .liquid-shape {
@@ -280,53 +320,6 @@ i {
     color: #12f7ff;
 }
 
-#hero .btn-container {
-    width: 150px;
-    height: 45px;
-    display: flex;
-    justify-content: center;
-    margin-top: 30px;
-    margin-left: 100px;
-}
-
-#hero .btn-container .btn-main {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    font-weight: 700;
-    background-color: var(--hover-color);
-    color: var(--secon-bg-color);
-    font-size: 1rem;
-    letter-spacing: 1px;
-    transition: .6s;
-    border-radius: 5px;
-    z-index: 1;
-    position: relative;
-    overflow: hidden;
-    border: 2px solid var(--hover-color);
-}
-
-.btn-main::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: var(--bg-color);
-    width: 100%;
-    height: 100%;
-    transition: .4s;
-    z-index: -1;
-}
-
-.btn-main:hover::before {
-    width: 0;
-}
-
-
-
-
 
 .darkmode .btn-main::before {
     width: 0;
@@ -337,17 +330,13 @@ i {
 }
 
 
-
-
-
 .hero-texts-section .social-icons {
-    width: 180px;
+    width: 200px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 8px 10px;
-    margin-top: 50px;
-    margin-left: 85px;
+    margin-top: 30px;
     transition: all 2s ease-in-out;
     visibility: hidden;
     opacity: 0;
@@ -360,11 +349,10 @@ i {
 }
 
 .border-bottom-ani {
-    width: 180px;
     border: 1px solid black;
-    margin-left: 85px;
     transition: all 1s ease;
     animation: drawOut 2s ease forwards;
+    margin-top: 3px;
 }
 
 @keyframes drawOut {
@@ -386,7 +374,7 @@ i {
         border-color: var(--text-color);
         visibility: visible;
         opacity: 10;
-        width: 180px;
+        width: 140px;
     }
 
 }
@@ -412,17 +400,20 @@ i {
 
 .hero-texts-section .social-icons a i {
     background: var(--hover-color);
-    padding: 5px;
-    border-radius: 50%;
+    padding: 7px;
+    border-radius: 20%;
     transition: animation-delay 1s;
     animation: dropIn ease-in-out 3s forwards;
     animation-delay: calc(var(--order) * 200ms);
     border: 1px solid transparent;
-    transition: .3s ease-in-out;
+    transition: .3s ease-in;
+    border: 2px solid transparent;
 }
 
-.hero-texts-section .social-icons a i:hover {
-    color: #8c8b8b;
+.hero-texts-section .social-icons a:hover i {
+    background: var(--bg-color);
+    border: 2px solid var(--hover-color);
+    color: #000;
 }
 
 .darkmode .hero-texts-section .social-icons a i:hover {
@@ -760,6 +751,9 @@ input:checked+.slider:before {
 
 #about-section {
     padding: 20px 50px;
+}
+
+.about-section {
     display: flex;
     grid-gap: 3rem;
     align-items: center;
@@ -893,4 +887,80 @@ input:checked+.slider:before {
     line-height: 27px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-weight: 400;
+}
+
+
+.accomplishments {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    margin-top: 30px;
+    width: 100%;
+    height: 35vh;
+}
+
+.accomplishments .outer-circle {
+    display: flex;
+}
+
+
+.count {
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--hover-color);
+}
+
+.accomplishments .outer-circle .inner-circle1,
+.inner-circle2,
+.inner-circle3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    padding: 20px;
+    text-align: center;
+    outline: 7px solid var(--hover-color);
+    animation: float alternate 2s infinite, morph 6s linear infinite;
+    transition: 1s ease;
+    border: 4px solid var(--secon-bg-color);
+}
+
+.inner-circle2 {
+    animation-delay: .6s;
+}
+
+.inner-circle3 {
+    animation-delay: 1.2s;
+}
+
+
+
+@keyframes float {
+    to {
+        transform: translateY(18px);
+    }
+}
+
+@keyframes morph {
+
+    0%,
+    100% {
+        border-radius: 40% 60% 70% 30% / 40% 50% 60%;
+    }
+
+    30% {
+        border-radius: 70% 30% 50% 50% / 30% 30% 70% 70%;
+    }
+
+    60% {
+        border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%;
+    }
+
+    80% {
+        border-radius: 69% 31% 66% 34% / 21% 30% 70% 79%;
+    }
 }

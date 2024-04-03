@@ -51,13 +51,7 @@ activateDarkmode.addEventListener("click", () => {
     localStorage.setItem("theme", isDarkMode ? "dark" : "light");
 
     console.log("Dark mode toggled:", isDarkMode ? "on" : "off");
-
 });
-
-
-
-
-
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -166,4 +160,4 @@ const animateColor = setInterval(() => {
         readMoreBtn.style.setProperty('border-color', 'var(--hover-color)')
         clearInterval(animateColor);
     }
-}, 60)
+}, 60);
